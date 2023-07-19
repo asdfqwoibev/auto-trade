@@ -22,6 +22,8 @@ URL_BASE: "https://openapi.koreainvestment.com:9443"
 #디스코드 웹훅 URL
 DISCORD_WEBHOOK_URL: "https://discord.com/api/webhooks/1090256305656176750/8WOnoV0mbv07JVHSA0DFvRmnDoAkqIErTo-SM3vpFhIfQW7lnGeESiy6GXpzd3fireEs"
 
+with open('config.yaml', encoding='UTF-8') as f:
+    cfg = yaml.load(f, Loader=yaml.FullLoader)
 APP_KEY = _cfg['APP_KEY']
 APP_SECRET = _cfg['APP_SECRET']
 ACCESS_TOKEN = ""
