@@ -1,7 +1,6 @@
 import requests
 import json
 import datetime
-from pytz import timezone
 import time
 import yaml
 
@@ -254,7 +253,8 @@ try:
 
     send_message("===해외 주식 자동매매 프로그램을 시작합니다===")
     while True:
-        t_now = datetime.datetime.now(timezone('America/New_York')) # 뉴욕 기준 현재 시간
+        t_now1 = datetime.datetime.now() 
+        t_now = t_now1 - datetime.timedelta(hours = 13) 
         t_9 = t_now.replace(hour=9, minute=30, second=0, microsecond=0)
         t_start = t_now.replace(hour=9, minute=35, second=0, microsecond=0)
         t_sell = t_now.replace(hour=15, minute=45, second=0, microsecond=0)
